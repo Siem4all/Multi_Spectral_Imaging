@@ -254,7 +254,8 @@ classdef MultiSpectralImaging
                 grid on; % Optional: Add grid for better readability 
                 image_index=image_index+4;
             end
-            saveas(gcf, sprintf('C:\\Users\\DELL\\Documents\\MATLAB\\src\\results\\%s_result_of_band_%d.png', name, band_num(i)));            hold off;
+            saveas(gcf, sprintf('C:\\Users\\DELL\\Documents\\MATLAB\\src\\results\\%s_result_of_band_%d.png', name, band_num(i)));    
+            hold off;
             % filename = sprintf('colorImage_of_%s_band_%d.png', name, band_num);
             % % Check if the file exists
             % if isfile(filename)
