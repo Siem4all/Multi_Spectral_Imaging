@@ -13,15 +13,15 @@ classdef DataVisualize
         
         function makePlot(obj)
             % Define arrays for line widths, colors, and styles
-            lineWidths  = [1, 1.5, 2, 2.5];
-            lineColors  = {'blue', 'red', 'blue', 'red'};
-            lineStyles  = {'-', '--', ':', '-.'};
-            wavelengths = [735, 800, 865, 930]; 
-            names       = {'Ester', 'Siem'};
+            lineWidths     = [1, 1.5, 2, 2.5];
+            lineColors     = {'blue', 'red', 'blue', 'red'};
+            lineStyles     = {'-', '--', ':', '-.'};
+            wavelengths    = [735, 800, 865, 930]; 
+            names          = {'Ester', 'Siem'};
 
             % Initialize a figure 
             figure;
-            prefixes     = {'Avg reflection', 'Avg si'};
+            prefixes       = {'Avg reflection', 'Avg si'};
 
             for k = 1:length(prefixes)
                 % Create subplots
