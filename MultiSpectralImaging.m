@@ -117,13 +117,13 @@ classdef MultiSpectralImaging
             end
             img_db=im2double(img);
             % Define the row and column indices for each band
-           row_indices = [rows(1,1), rows(1,2); rows(1,1), rows(1,2); rows(2,1), rows(2,2); rows(2,1), rows(2,2)];
-           col_indices = [cols(1,1), cols(1,2); cols(2,1), cols(2,2); cols(1,1), cols(1,2); cols(2,1), cols(2,2)];
-           new_img        =img_db(row_indices(j, 1):row_indices(j, 2), col_indices(j, 1):col_indices(j, 2));
+           row_indices      = [rows(1,1), rows(1,2); rows(1,1), rows(1,2); rows(2,1), rows(2,2); rows(2,1), rows(2,2)];
+           col_indices      = [cols(1,1), cols(1,2); cols(2,1), cols(2,2); cols(1,1), cols(1,2); cols(2,1), cols(2,2)];
+           new_img          =img_db(row_indices(j, 1):row_indices(j, 2), col_indices(j, 1):col_indices(j, 2));
            if obj.roi==true
                % Extract the First ROI Positions
-                  x        = position(:, 1);
-                  y        = position(:, 2);
+                  x         = position(:, 1);
+                  y         = position(:, 2);
 
                   % Create a binary mask using roipoly
                   mask      = roipoly(new_img, x, y);
